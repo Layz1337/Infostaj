@@ -9,8 +9,9 @@ def sender():
     number = input('Please enter a number.\n')
     sendersock.send(str(number).encode('utf-8'))
     data = sendersock.recv(1024).decode('utf-8')
-    print(data)
+    return(data)
     sendersock.close()
-    
-while True:
-    sender()
+
+if __name__ == "__main__":
+    while True:
+        print(sender())
