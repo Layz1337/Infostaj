@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: UTF-8 -*-
 import socket
-serversock = socket.socket()
 
 
 def answer(number):
@@ -22,12 +21,12 @@ def answer(number):
 
 
 def listener():
+    serversock = socket.socket()
     port = 8080
     serversock.bind(("", port))
     serversock.listen(10)
     while True:
         conn, addr = serversock.accept()
-        print('New connection from {}\n'.format(addr[0]))
         conn.settimeout(60)
         try:
             data = int(conn.recv(1024).decode('utf-8'))
@@ -40,4 +39,5 @@ def listener():
         finally:
             conn.close()
 
-listener()
+if __name__ == "__main__":
+    listener()
