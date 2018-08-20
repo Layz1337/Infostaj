@@ -23,12 +23,12 @@ def answer(number):
     return delit 
 
 
-def listener(port = 8080):
+def listener(port = 8000):
     """
     Функция, создающая сокет "на прослушивание".
 
     Использование:
-    listener(<port>) -- где переменная port задает порт для создания сокета. По умолчанию принимает значение "8080"
+    listener(<port>) -- где переменная port задает порт для создания сокета. По умолчанию принимает значение "8000"
     """
     serversock = socket.socket()
     serversock.bind(("", port))

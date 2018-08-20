@@ -2,13 +2,13 @@
 # -*- coding: UTF-8 -*-
 import socket
 
-def sender(host = 'localhost', port = 8080):
+def sender(host = 'localhost', port = 8000):
     """
     Функция для отправки сообщения и принятия ответа  от сервера. Ответ возвращается в виде строки.
     
     Использование:
     sender(<host>, <port>) -- host это адрес сервера, по умолчанию имеет значение 'localhost';
-                              port это порт сервера, по умолчанию имеет значение 8080
+                              port это порт сервера, по умолчанию имеет значение 8000
     """
     try:
         sendersock = socket.socket()
