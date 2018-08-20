@@ -5,7 +5,7 @@ import socket
 
 def answer(number):
     """
-    Функция, возвращающая результат факторизации целого числа
+    Функция, возвращающая результат факторизации целого числа.
     """
     if number == 1:
         return [1]
@@ -13,9 +13,9 @@ def answer(number):
         raise ValueError
     delit = list()
     d = 2
-    while d*d <= number:
+    while d**2 <= number:
         while number%d == 0:
-            number = int(number/d)
+            number = int(number/d)      # Тут возможно накопление ошибки в результате деления
             delit.append(d)
         d += 1
     if number > 1:
