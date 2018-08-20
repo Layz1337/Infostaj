@@ -1,9 +1,12 @@
-#!/usr/bin/env python3
+#! /usr/bin/python3
 # -*- coding: UTF-8 -*-
 import socket
 
 
 def answer(number):
+    """
+    Функция, возвращающая результат факторизации целого числа
+    """
     if number == 1:
         return [1]
     elif number < 1:
@@ -20,9 +23,13 @@ def answer(number):
     return delit 
 
 
-def listener():
+def listener(port = 8080):
+    """
+    Функция, создающая сокет "на прослушивание".
+
+    listener(<port>) -- где переменная port задает порт для создания сокета
+    """
     serversock = socket.socket()
-    port = 8080
     serversock.bind(("", port))
     serversock.listen(10)
     while True:
