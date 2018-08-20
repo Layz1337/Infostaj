@@ -7,7 +7,8 @@ def sender(host = 'localhost', port = 8080):
     Функция для отправки сообщения и принятия ответа  от сервера.
 
     Использование:
-    sender(<host>, <port>) -- где host это адрес сервера, port -- порт сервера
+    sender(<host>, <port>) -- host это адрес сервера, по умолчанию имеет значение 'localhost';
+                              port это порт сервера, по умолчанию имеет значение 8080
     """
     try:
         sendersock = socket.socket()
