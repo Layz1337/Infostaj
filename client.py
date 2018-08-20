@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 import socket
 
-def sender(host = 'localhost', port = 8000):
+def sender(hostname = 'localhost', port = 8000):
     """
     Функция для отправки сообщения и принятия ответа  от сервера. Ответ возвращается в виде строки.
     
@@ -12,7 +12,7 @@ def sender(host = 'localhost', port = 8000):
     """
     try:
         sendersock = socket.socket()
-        sendersock.connect((host, port))
+        sendersock.connect((hostname, port))
         number = input('Please enter a number.\n')
         sendersock.send(str(number).encode('utf-8'))
         data = sendersock.recv(1024).decode('utf-8')
