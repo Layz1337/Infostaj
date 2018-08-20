@@ -1,8 +1,14 @@
-#!/usr/bin/env python3
+#! /usr/bin/python3
 # -*- coding: UTF-8 -*-
 import socket
 
 def sender(host = 'localhost', port = 8080):
+    """
+    Функция для отправки сообщения и принятия ответа  от сервера.
+
+    Использование:
+    sender(<host>, <port>) -- где host это адрес сервера, port -- порт сервера
+    """
     try:
         sendersock = socket.socket()
         sendersock.connect((host, port))
