@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 import socket
 
-
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 def answer(number):
     """
     Функция, возвращающая результат факторизации целого числа.
@@ -15,7 +15,7 @@ def answer(number):
     d = 2
     while d**2 <= number:
         while number%d == 0:
-            number = int(number/d)      # Тут возможно накопление ошибки в результате деления
+            number = int(number/d)  # Возможно накопление ошибки
             delit.append(d)
         d += 1
     if number > 1:
@@ -28,7 +28,8 @@ def listener(port = 8000):
     Функция, создающая сокет "на прослушивание".
 
     Использование:
-    listener(<port>) -- где переменная port задает порт для создания сокета. По умолчанию принимает значение "8000"
+    listener(<port>) -- где переменная port задает порт для создания сокета.
+                        По умолчанию принимает значение "8000"
     """
     serversock = socket.socket()
     serversock.bind(("", port))
